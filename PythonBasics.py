@@ -19,3 +19,11 @@ current_mood = input("How are you today ?  ")
 
 # displaying the mood !
 print("I am glad that you are ,", current_mood)
+
+# PEMDAS...
+print("PEMDAS: ", 0.1 + 0.1 + 0.1 - 0.3)
+
+# we get 0.0000005
+# now we can round this
+print("rounding: ",round(0.1 + 0.1 + 0.1 - 0.3))
+
