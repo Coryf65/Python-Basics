@@ -12,3 +12,10 @@ print("These", "will be joined", "together by spaces!")
 is_int = 12
 
 print(is_int)
+
+
+# getting user input and saving as a var
+current_mood = input("How are you today ?  ")
+
+# displaying the mood !
+print("I am glad that you are ,", current_mood)
