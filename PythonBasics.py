@@ -29,4 +29,7 @@ print("rounding: ",round(0.1 + 0.1 + 0.1 - 0.3))
 
 
 # this Method helps give info about the passed in function or Argument!
-help(str)
+#help(str)
+
+# finding strings in strings
+"popcorn" in "Buttered Popcorn"
