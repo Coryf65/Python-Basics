@@ -27,3 +27,6 @@ print("PEMDAS: ", 0.1 + 0.1 + 0.1 - 0.3)
 # now we can round this
 print("rounding: ",round(0.1 + 0.1 + 0.1 - 0.3))
 
+
+# this Method helps give info about the passed in function or Argument!
+help(str)
