@@ -4,7 +4,7 @@
 def Yell(text):
     text.upper()
     number_of_chars = len(text)
-    result = text + "!" * (number_of_chars //2)
+    result = text + "!" * (number_of_chars //4)
     print(result)
 
 #showing Praise
