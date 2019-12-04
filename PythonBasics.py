@@ -32,4 +32,4 @@ print("rounding: ",round(0.1 + 0.1 + 0.1 - 0.3))
 #help(str)
 
 # finding strings in strings
-"popcorn" in "Buttered Popcorn"
+print("corn" in "Buttered Popcorn")
