@@ -1,23 +1,13 @@
 # code smell tut
 
+# creating a Function
+def Yell(text):
+    text.upper()
+    number_of_chars = len(text)
+    result = text + "!" * (number_of_chars //2)
+    print(result)
+
 #showing Praise
-praise = "You are doing great"
-praise = praise.upper()
-number_of_chars = len(praise)
-result = praise + "!" * number_of_chars
-print(result)
-
-# showing advice
-advice = "Don't forget to ask for help"
-advice = advice.upper()
-number_of_chars = len(advice)
-result = advice + "!" * number_of_chars
-print(result)
-
-
-# showing advice
-advice2 = "Don't Repeat Yourself, DRY"
-advice2 = advice2.upper()
-number_of_chars = len(advice2)
-result = advice2 + "!" * number_of_chars
-print(result)
+Yell("You are doing Great")
+Yell("Don't forget to ask for Help")
+Yell("Keep it D.R.Y.")
