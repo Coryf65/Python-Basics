@@ -16,20 +16,24 @@ while tickets_remaining >= 1:
     current_user = input('Please enter your name, ')
     print('Welcome , {}'.format(current_user))
 
-    tickets_to_buy = input('How many tickets would you like to purchase? ')
-    tickets_to_buy = int(tickets_to_buy)
-
-    print('That would be ${0}'.format(CalculateTicketPrice(tickets_to_buy)))
-
-    # if they want to proceed Y/N
-    should_proceed = input('Would you like to purchase?  Y/N,   ')
-    if should_proceed.lower() == 'y':
-        # TODO: Gather Creditcard info and process
-        print('SOLD!')
-        tickets_remaining -= tickets_to_buy
+    num_tickets = input('How many tickets would you like to purchase? ')
+    
+    # TODO error here, we get a ValueError
+    try:
+        num_tickets = int(num_tickets)
+    except ValueError:
+        print('oh no, we ran into an issue.  Please try again')
     else:
-        # thank them by name
-        print('Thank you anyways, {0}'.format(current_user))
+        print('That would be ${0}'.format(CalculateTicketPrice(num_tickets)))
 
+        # if they want to proceed Y/N
+        should_proceed = input('Would you like to purchase?  Y/N,   ')
+        if should_proceed.lower() == 'y':
+            # TODO: Gather Creditcard info and process
+            print('SOLD!')
+            tickets_remaining -= num_tickets
+        else:
+            # thank them by name
+            print('Thank you anyways, {0}'.format(current_user))
 # notify that we are sold out
 print('Sorry we are all sold out! ')
