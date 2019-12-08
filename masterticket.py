@@ -12,7 +12,7 @@ def CalculateTicketPrice(tickets):
     return math.ceil(tickets * TICKET_PRICE)
 
 while tickets_remaining >= 1:
-    print('You have {0} tickets left.'.format(GetTicketsRemaining()))
+    print('there are {0} tickets remaining.'.format(GetTicketsRemaining()))
     current_user = input('Please enter your name, ')
     print('Welcome , {}'.format(current_user))
 
@@ -21,8 +21,12 @@ while tickets_remaining >= 1:
     # TODO error here, we get a ValueError
     try:
         num_tickets = int(num_tickets)
-    except ValueError:
-        print('oh no, we ran into an issue.  Please try again')
+        # Raise a ValueError if the request is for more than available
+        if num_tickets > tickets_remaining:
+            raise ValueError('There are only {0} tickets remaining'.format(tickets_remaining))
+    except ValueError as err:
+        # inclue the error text in the output
+        print('oh no, we ran into an issue. {0}. Please try again'.format(err))
     else:
         print('That would be ${0}'.format(CalculateTicketPrice(num_tickets)))
 
