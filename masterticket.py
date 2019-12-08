@@ -30,3 +30,18 @@ tickets_to_buy = int(tickets_to_buy)
 # calculate the cost of how many tickets * the price 
 # output to price to the screen
 print('That would be ${0}'.format(CalculateTicketPrice(tickets_to_buy)))
+
+# if they want to proceed Y/N
+should_proceed = input('Would you like to purchase?  Y/N,   ')
+# If they do
+if should_proceed.lower() == 'y':
+    # print out 'SOLD!' to confirm the purchase
+    # TODO: Gather Creditcard info and process
+    print('SOLD!')
+    # and then decrement the tickets remaing by the num of tickets purchased
+    tickets_remaining -= tickets_to_buy
+
+# otherwise
+else:
+    # thank them by name
+    print('Thank you anyways, {0}'.format(current_user))
