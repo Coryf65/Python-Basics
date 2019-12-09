@@ -4,14 +4,16 @@ import math
 TICKET_PRICE = 10
 tickets_remaining = 100
 
-def GetTicketsRemaining():
+
+def get_tickets_remaining():
     return tickets_remaining
 
-def CalculateTicketPrice(tickets):
+# Calculate the price function
+def calculate_ticket_price(tickets):
     return math.ceil(tickets * TICKET_PRICE)
 
 while tickets_remaining >= 1:
-    print('there are {0} tickets remaining.'.format(GetTicketsRemaining()))
+    print('there are {0} tickets remaining.'.format(get_tickets_remaining()))
     current_user = input('Please enter your name, ')
     print('Welcome , {}'.format(current_user))
 
@@ -24,9 +26,10 @@ while tickets_remaining >= 1:
     except ValueError as err:
         print('oh no, we ran into an issue. {0}. Please try again'.format(err))
     else:
-        print('That would be ${0}'.format(CalculateTicketPrice(num_tickets)))
+        print('That would be ${0}'.format(calculate_ticket_price(num_tickets)))
         should_proceed = input('Would you like to purchase?  Y/N,   ')
         if should_proceed.lower() == 'y':
+            # TODO: Gather CC info and process payment
             print('SOLD!')
             tickets_remaining -= num_tickets
         else:
