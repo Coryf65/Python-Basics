@@ -2,6 +2,7 @@ import math
 
 # Global Vars
 TICKET_PRICE = 10
+SERVICE_CHARGE = 2
 tickets_remaining = 100
 
 
@@ -10,7 +11,8 @@ def get_tickets_remaining():
 
 # Calculate the price function
 def calculate_ticket_price(tickets):
-    return math.ceil(tickets * TICKET_PRICE)
+    # adding service charge of $2.00
+    return math.ceil(tickets * TICKET_PRICE) + SERVICE_CHARGE
 
 while tickets_remaining >= 1:
     print('there are {0} tickets remaining.'.format(get_tickets_remaining()))
