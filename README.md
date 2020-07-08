@@ -84,3 +84,33 @@ a = (1, 'two', 3.0, [4, 'four'], 5)
 print(f'x is {a}')
 print(id(a)) # id(object) Returns an Unique ID for given object
 ```
+
+- Using Multiple Args up to as many as you want
+
+```Python
+def main():
+    kitten('meow', 'grrr', 'purr')
+
+def kitten(*args):
+    if len(args):
+        for s in args:
+            print(s)
+    else: print('Meow.')
+
+if __name__ == '__main__': main()
+```
+
+- Using Keyword Arguments, we can pass a Dictionary that can have named arguments
+
+```Python
+def main():
+    kitten(Buffy = 'meow', Zilla = 'grr', Angel = 'rawr')
+
+def kitten(**kwargs):
+    if len(kwargs):
+        for k in kwargs:
+            print('Kitten {} says {}'.format(k, kwargs[k]))
+    else: print('Meow.')
+
+if __name__ == '__main__': main()
+```
