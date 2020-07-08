@@ -2,10 +2,9 @@
 
 Learning the Syntax of the language, and trying to use it for for side projects.
 
-
 snake_casing : for naming conventions hehe
 
-#for code comments
+```#for code comments```
 
 - Blocks do not define Scope in Python
 - Python does not have switch/case statements
@@ -17,11 +16,45 @@ snake_casing : for naming conventions hehe
 ## Python Types
 
 - Strings
-- Integers
-- Boolean
-- Floating Points (Floats)
+```Python
+x = 'Hello Github'
+```
 
-When using Python with Money you should use something like Decimals and NOT Floats
+- Integers
+```Python
+x = 65
+```
+
+- Boolean, True and False
+```Python
+x = True
+```
+
+- Floating Points (Floats)
+```Python
+x = 100.0022001
+```
+
+- None (like NULL or NOTHING)
+```Python
+x = None
+```
+- Lists
+```Python
+x = [ 1, 2, 3, 4, 5 ]
+```
+
+- Tuples, Immutable (cannot change once initialized)
+```Python
+x = ( 1, 2, 3, 4, 5 )
+```
+
+- Dictionary, Key Value Pair
+```Python
+x = { 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5 }
+```
+
+### When using Python with Money you should use something like Decimals and NOT Floats
 
 **example**
 ```Python
@@ -33,3 +66,10 @@ x = a + a + a - b
 print('x is a {}'.format(x))
 print(type(x))
 ```
+
+What evaluates as False ?
+
+0
+""
+None
+
