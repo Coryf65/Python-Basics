@@ -6,7 +6,7 @@ snake_casing : for naming conventions hehe
 
 ```#for code comments```
 
-- Blocks do not define Scope in Python
+- Blocks do not define Scope, Functions Do
 - Python does not have switch/case statements
 - All functions have a return value, they default to None
 - self is used to reference the object itself
@@ -76,7 +76,7 @@ What evaluates as False ?
 
 ## Cool Stuff
 
-- You can check an objects uniqye ID by calling id(*object*)
+- You can check an objects unique ID by calling id(*object*)
 
 *example*
 ```Python
