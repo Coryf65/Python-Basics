@@ -69,7 +69,18 @@ print(type(x))
 
 What evaluates as False ?
 
-0
-""
-None
+- 0
+- ""
+- None
 
+
+## Cool Stuff
+
+- You can check an objects uniqye ID by calling id(*object*)
+
+*example*
+```Python
+a = (1, 'two', 3.0, [4, 'four'], 5)
+print(f'x is {a}')
+print(id(a)) # id(object) Returns an Unique ID for given object
+```
