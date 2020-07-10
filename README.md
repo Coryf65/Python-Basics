@@ -148,3 +148,12 @@ def inclusive_range(*args):
 if __name__ == '__main__': main()
 ```
 
+### Finding the Current Working Directory
+
+```Python
+import os
+ROOT_PATH = os.path.dirname(os.path.dirname(__file__))
+FILE = os.path.join(ROOT_PATH, "file.txt")
+
+```
+
